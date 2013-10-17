@@ -1,0 +1,53 @@
+{
+    "spells": 
+    [
+  		{
+			"id": 1,
+			"name": "shadowwordpain",
+			"image": "spell_shadow_shadowwordpain.jpg",
+			"category": "shadow",
+			"type": "damage",
+			"spellMana": 8,
+			"point": 3,
+			"tickTime": 7,
+			"colddown": 7000,
+			"castingTime": 1000
+        },
+  		{
+			"id": 2,
+			"name": "mindblast",
+			"image": "spell_shadow_unholyfrenzy.jpg",
+			"category": "shadow",
+			"type": "damage",
+			"spellMana": 10,
+			"point": 18,
+			"tickTime": 0,
+			"colddown": 2000,
+			"castingTime": 1500
+        },
+  		{
+			"id": 3,
+			"name": "renew",
+			"image": "spell_holy_renew.jpg",
+			"category": "holy",
+			"type": "healing",
+			"spellMana": 7,
+			"point": 2,
+			"tickTime": 6,
+			"colddown": 6000,
+			"castingTime": 1000
+        },
+  		{
+			"id": 4,
+			"name": "flashheal",
+			"image": "spell_holy_flashheal.jpg",
+			"category": "holy",
+			"type": "healing",
+			"spellMana": 9,
+			"point": 12,
+			"tickTime": 0,
+			"colddown": 1500,
+			"castingTime": 1000
+        }
+    ]
+}

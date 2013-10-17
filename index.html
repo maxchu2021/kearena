@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta property="og:title" content="World of Warcraft Arena Javascript Version - Alpha"/>
+    <meta property="og:type" content="game"/>
+    <meta property="og:url" content="http://keany.site40.net/wow/"/>
+    <meta property="og:image" content="http://4.bp.blogspot.com/-qrqL3IKKGGs/UVlQCzaCa-I/AAAAAAAAIbg/8WmFKgVdB-s/s1600/wow0401.jpg"/>
+    <meta property="og:site_name" content="World of Warcraft Arena Javascript Version - Alpha"/>
+    <meta property="og:description"
+          content="Join the arena. Fight for honor!"/>	
+	<link rel="stylesheet" type="text/css" href="css/metro-bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/wow.css" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<title>Kearena</title>	
+</head>
+<body onkeydown="showKeyCode(event);">
+
+
+<div id="screen">
+    <script type="text/javascript" src="js/readme.js"></script>
+    <div id="readme"><div><script type="text/javascript">create_readme();</script></div></div>
+
+    <div id="combat-log"></div>
+    <div id="nav">
+        <button class="btn btn-small btn-warning" onclick="$('#combat-log').toggle();$('#combat-log').scrollTop($('#combat-log')[0].scrollHeight);" title="Key: L">L</button>
+        <button class="btn btn-small btn-info" onclick="$('#readme').toggle();" title="Key: Esc/?">?</button>
+        <button class="btn btn-small btn-info" onclick="location.reload();" title="Key: R">R</button>
+    </div>
+	<div id="menu"><a title="Key: Enter" href="javascript:start();">Start</a></div>
+	<div id="record"><span class="player1">0</span>-<span class="player2">0</span></div>
+	<div id="gameTime"></div>
+	<div id="counting"></div>
+
+	<div id="player1">
+		<b></b>
+
+		<div class="progress progress-danger">
+		  <div class="bar health-points"
+			   style="width: 100%;"></div>
+		</div>
+		<div class="progress">
+		  <div class="bar mana-points"
+			   style="width: 100%;"></div>
+		</div>
+
+		<div class="buffs"></div>
+		<div class="debuffs"></div>	
+		
+		<div class="progress progress-warning casting">
+		  <div class="bar"
+			   style="width: 0%;"></div>
+		</div>
+        
+        <div class="scrolling-combat-text"></div>
+		
+		<div class="character"></div>
+		
+		<div class="spellbar">
+			<div class="bar" id="bar_shadowwordpain"><a title="Key: 1" href="javascript:void(0);" onclick="action('shadowwordpain', 'player1', 'player2');"><img src="img/spell_shadow_shadowwordpain.jpg"></a></div>
+			<div class="bar" id="bar_mindblast"><a title="Key: 2" href="javascript:void(0);" onclick="action('mindblast', 'player1','player2')"><img src="img/spell_shadow_unholyfrenzy.jpg"></a></div>
+		</div>
+		<div class="spellbar spellbar-healing">
+			<div class="bar" id="bar_renew"><a title="Key: 3" href="javascript:void(0);" onclick="action('renew', 'player1','player1')"><img src="img/spell_holy_renew.jpg"></a></div>
+			<div class="bar" id="bar_flashheal"><a title="Key: 4" href="javascript:void(0);" onclick="action('flashheal', 'player1','player1')"><img src="img/spell_holy_flashheal.jpg"></a></div>
+		</div>		
+	</div><!-- end #player1 -->
+
+	<div id="player2">
+		<b></b>
+
+		<div class="progress progress-danger">
+		  <div class="bar health-points"
+			   style="width: 100%;"></div>
+		</div>
+		<div class="progress">
+		  <div class="bar mana-points"
+			   style="width: 100%;"></div>
+		</div>
+	
+		<div class="buffs"></div>
+		<div class="debuffs"></div>		
+
+		<div class="progress progress-warning casting">
+		  <div class="bar"
+			   style="width: 0%;"></div>
+		</div>	
+		
+        <div class="scrolling-combat-text"></div>
+        
+		<div class="character"></div>
+	</div><!-- end #player2 -->
+
+</div><!-- end #screen -->
+
+
+<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/func.js"></script>
+<script type="text/javascript" src="js/var.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/spell.js"></script>
+<script type="text/javascript" src="js/bot.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-197093-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
