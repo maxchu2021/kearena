@@ -24,9 +24,9 @@
 
     <div id="combat-log"></div>
     <div id="nav">
-        <button class="btn btn-small btn-warning" onclick="$('#combat-log').toggle();$('#combat-log').scrollTop($('#combat-log')[0].scrollHeight);" title="Key: L">L</button>
-        <button class="btn btn-small btn-info" onclick="$('#readme').toggle();" title="Key: Esc/?">?</button>
-        <button class="btn btn-small btn-info" onclick="location.reload();" title="Key: R">R</button>
+        <button class="btn btn-small btn-warning" onclick="$('#combat-log').toggle();$('#combat-log').scrollTop($('#combat-log')[0].scrollHeight);" title="Log">L</button>
+        <button class="btn btn-small btn-info" onclick="$('#readme').toggle();" title="Help">?</button>
+        <button class="btn btn-small btn-info" onclick="location.reload();" title="Reload">R</button>
     </div>
 	<div id="menu"><a title="Key: Enter" href="javascript:start();">Start</a></div>
 	<div id="record"><span class="player1">0</span>-<span class="player2">0</span></div>
@@ -58,12 +58,12 @@
 		<div class="character"></div>
 		
 		<div class="spellbar">
-			<div class="bar" id="bar_shadowwordpain"><a title="Key: 1" href="javascript:void(0);" onclick="action('shadowwordpain', 'player1', 'player2');"><img src="img/spell_shadow_shadowwordpain.jpg"></a></div>
-			<div class="bar" id="bar_mindblast"><a title="Key: 2" href="javascript:void(0);" onclick="action('mindblast', 'player1','player2')"><img src="img/spell_shadow_unholyfrenzy.jpg"></a></div>
+			<div class="bar" id="bar_shadowwordpain"><a title="Key: 1" href="javascript:void(0);" onclick="action('shadowwordpain', 'player1', 'player2')" ondblclick="this.click()"><img src="img/spell_shadow_shadowwordpain.jpg"></a></div>
+			<div class="bar" id="bar_mindblast"><a title="Key: 2" href="javascript:void(0);" onclick="action('mindblast', 'player1','player2')" ondblclick="this.click()"><img src="img/spell_shadow_unholyfrenzy.jpg"></a></div>
 		</div>
 		<div class="spellbar spellbar-healing">
-			<div class="bar" id="bar_renew"><a title="Key: 3" href="javascript:void(0);" onclick="action('renew', 'player1','player1')"><img src="img/spell_holy_renew.jpg"></a></div>
-			<div class="bar" id="bar_flashheal"><a title="Key: 4" href="javascript:void(0);" onclick="action('flashheal', 'player1','player1')"><img src="img/spell_holy_flashheal.jpg"></a></div>
+			<div class="bar" id="bar_renew"><a title="Key: 3" href="javascript:void(0);" onclick="action('renew', 'player1','player1')" ondblclick="this.click()"><img src="img/spell_holy_renew.jpg"></a></div>
+			<div class="bar" id="bar_flashheal"><a title="Key: 4" href="javascript:void(0);" onclick="action('flashheal', 'player1','player1')" ondblclick="this.click()"><img src="img/spell_holy_flashheal.jpg"></a></div>
 		</div>		
 	</div><!-- end #player1 -->
 
@@ -102,6 +102,11 @@
 <script type="text/javascript" src="js/spell.js"></script>
 <script type="text/javascript" src="js/bot.js"></script>
 <script type="text/javascript">
+
+	window.onload = function(){
+		init();
+	}
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-197093-11']);
   _gaq.push(['_trackPageview']);
