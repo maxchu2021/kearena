@@ -45,14 +45,14 @@ usefloor = function(min, max) {
 
 activeBot = function() {
     if (newbot === true) {
-        player2.name = 'Undead 2',
+        player2.name = 'Undead',
         player2.image = 'url(img/shadow_priest_changes.png)',
         $('#player2 b').html(player2.name),
         $('#player2 .character').css('background-image', player2.image);
 
-        setTimeout('undead2()', 4500);
+        setTimeout('undead()', 4500);
     } else {
-        setTimeout('dummybot2()', 5000);
+        setTimeout('dummybot()', 5000);
     }
 }
 

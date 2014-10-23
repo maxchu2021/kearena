@@ -1,6 +1,7 @@
 var
+
     // Debug mode
-    debug = false;
+    debug = false,
 
     // Max health points and Max mana points
     maxhp = maxmp = 100,
@@ -65,4 +66,4 @@ var
     newbot = false,
 
     // Scrolling Combat Text
-    sct = 1,
+    sct = 1;
