@@ -60,7 +60,7 @@ undead = function() {
 
     action(spell, caster, target);
 
-    botTimeout = setTimeout('undead2()', botSpeed);
+    botTimeout = setTimeout('undead()', botSpeed);
 
     if (debug) {
         console.log('botSpeed: ' + botSpeed + ', rand: ' + rand);
