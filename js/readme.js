@@ -9,12 +9,12 @@ function create_readme(basepath) {
         '<p>Feel free to send me feedback or fork this. You can leave message on issues or contact me via my email.</p>' +
 
         '<h3>Readme</h3>' +
-        '<b>Key / Spell</b><br>' +
+        '<b>Key / Function</b><br>' +
         '1 - Shadow Word: Pain<br>' +
         '2 - Mind Blast<br>' +
         '3 - Renew<br>' +
         '4 - Flash Heal<br>' +
-        'Enter - Flash Heal<br>' +
+        'Enter - Start<br>' +
         'L - Log<br>' +
         'R - Reload<br>' +
         '/ or ? - Help<br>' +
